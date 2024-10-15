@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Details - FinanceBooks</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTTXJN9o0KXKnu1NtwW8C5N7BrkKGzNt8vXr0Gd0Y7sQ1Oqg6NuoTO7MHLZP6Th9bHoGgghbmg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #f4f6f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-brand {
+            color: #f0ad4e !important;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: #ffffff !important;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #f0ad4e !important;
+        }
+
+        .search-bar input {
+            width: 250px;
+        }
+
+        .book-cover {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .book-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #343a40;
+            margin-bottom: 15px;
+        }
+
+        .book-author {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+
+        .book-genre,
+        .book-publisher,
+        .book-date,
+        .book-pages {
+            font-size: 1rem;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+
+        .book-description {
+            font-size: 1rem;
+            color: #343a40;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            background-color: #f0ad4e;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #ec971f;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 40px 0;
+            margin-top: 40px;
+            /* Added margin to space out footer */
+        }
+
+        footer a {
+            color: #f0ad4e;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ec971f;
+            text-decoration: underline;
+        }
+
+        /* Ensure all footer text is white */
+        footer p,
+        footer h5,
+        footer ul,
+        footer li {
+            color: #ffffff;
+        }
+
+        /* Optional: Adjust icon colors */
+        .footer-icon {
+            color: #ffffff;
+            transition: color 0.3s;
+            font-size: 1.5rem;
+            /* Increase icon size */
+        }
+
+        .footer-icon:hover {
+            color: #f0ad4e;
+        }
+
+        /* Center Align Footer Social Media Icons */
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 768px) {
+            .book-title {
+                font-size: 1.5rem;
+            }
+
+            .book-author {
+                font-size: 1.1rem;
+            }
+
+            .book-description {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Additional spacing below book information */
+        .book-details {
+            margin-bottom: 40px;
+            /* Add space below book details */
+        }
+
+        .footer-icon {
+            color: white;
+        }
+
+        .footer-icon {
+            color: #ffffff;
+            /* Icon color */
+            font-size: 1.5rem;
+            /* Increase icon size for better visibility */
+            transition: color 0.3s;
+            /* Smooth color transition on hover */
+        }
+
+        .footer-icon:hover {
+            color: #ffcc00;
+            /* Highlight color on hover */
+        }
+
+        footer {
+            border-top: 1px solid #444;
+            /* Subtle top border for separation */
+        }
+
+        hr.border-light {
+            border-color: rgba(255, 255, 255, 0.2);
+            /* Light border for a subtle effect */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-dark shadow navbar navbar-dark navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="d-flex align-items-center navbar-brand" href="#">
+                <span
+                    style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: bold; color: #ffc107;">Chapter
+                    Chats</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="me-auto navbar-nav">
+                    <li class="nav-item">
+                        <a class="active nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="dropdown nav-item">
+                        <a class="dropdown-toggle nav-link" href="#" id="booksDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Books
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="booksDropdown">
+                            <li><a class="dropdown-item" href="#">Best Sellers</a></li>
+                            <li><a class="dropdown-item" href="#">New Releases</a></li>
+                            <li><a class="dropdown-item" href="#">Authors</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex search-bar">
+                    <input class="form-control rounded-pill me-2" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="rounded-pill btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Book Details Section -->
+    <div class="mt-5 book-details container">
+        <div class="row">
+            <!-- Book Cover -->
+            <div class="col-md-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHYp1xbw3kSQ0YmDesAOelDdoqXrvi56H41Q&s"
+                    alt="Rich Dad Poor Dad" class="mb-4 book-cover img-fluid" />
+            </div>
+            <!-- Book Information -->
+            <div class="col-md-8">
+                <h1 class="book-title">Rich Dad Poor Dad</h1>
+                <h4 class="book-author">by Robert T. Kiyosaki</h4>
+                <p class="book-genre"><strong>Genre:</strong> Personal Finance</p>
+                <p class="book-publisher"><strong>Publisher:</strong> Warner Books</p>
+                <p class="book-date"><strong>Published Date:</strong> April 1, 2000</p>
+                <p class="book-pages"><strong>Page Count:</strong> 207 pages</p>
+                <hr />
+                <h3>About the Book</h3>
+                <p class="book-description">
+                    "Rich Dad Poor Dad" is a groundbreaking book that challenges conventional wisdom about money and
+                    investing. Robert Kiyosaki shares his personal experiences from two fathers—his biological father
+                    (Poor Dad)
+                    and his best friend's father (Rich Dad)—to illustrate the differences in mindset and financial
+                    strategies. The book emphasizes the importance of financial education, investing in assets, and
+                    understanding how money works to achieve financial independence and success.
+                </p>
+                <a href="https://www.youtube.com/watch?v=ZKOywjeojkI" class="btn btn-primary">Hear Now</a>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white">
+    <div class="p-5 container">
+        <div class="text-center text-md-left row">
+            <div class="mb-4 col-lg-4 col-md-12">
+                <h5 class="mb-3 font-weight-bold text-uppercase">About Chapter Chats</h5>
+                <p class="small">Your go-to platform for discovering the best personal finance books and resources to
+                    empower your financial journey.</p>
+            </div>
+            <div class="mb-4 col-lg-4 col-md-6">
+                <h5 class="mb-3 font-weight-bold text-uppercase">Follow Us</h5>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="footer-icon me-3"><i class="fa-facebook-f fa-lg fab"></i></a>
+                    <a href="#" class="footer-icon me-3"><i class="fa-lg fa-twitter fab"></i></a>
+                    <a href="#" class="footer-icon"><i class="fa-instagram fa-lg fab"></i></a>
+                </div>
+            </div>
+            <div class="mb-4 col-lg-4 col-md-6">
+                <h5 class="mb-3 font-weight-bold text-uppercase">Contact Us</h5>
+                <p class="small">Email: <a href="mailto:support@chapterchats.com"
+                        class="text-white">suhailpno@gmail.com</a></p>
+                <p class="small">Phone: <a href="tel:+123456789" class="text-white">+91 (969) 890-2910</a></p>
+            </div>
+        </div>
+        <hr class="border-light" />
+        <div class="text-center">
+            <p class="mb-0">© 2024 Chapter Chats. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
